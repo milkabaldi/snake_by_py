@@ -6,7 +6,7 @@ from turtle import Screen, window_height, window_width
 
 GAME_WIDTH       = 1000
 GAME_HEIGHT      = 700
-SPEED            = 100
+SPEED            = 200
 SPACE_SIZE       = 50
 BODY_PARTS       = 3
 SNAKE_COLOR      = '#727fa1'
@@ -96,10 +96,8 @@ def check_collisions(snake):
     x, y = snake.coordinates[0]
 
     if x < 0 or x >= GAME_WIDTH:
-        print("GAME OVER")
         return True
     elif y < 0 or y >= GAME_HEIGHT:
-        print("GAME OVER")
         return True
     
     for body_part in snake.coordinates[1:]:
@@ -110,7 +108,6 @@ def check_collisions(snake):
     return False
 
 def game_over():
-
     canvas.delete(ALL)
     canvas.create_text(canvas.winfo_width()/2, canvas.winfo_height()/2, font=('consolas', 70), text="YOU DIED", fill="#FF0000", tag="gameover")
 
