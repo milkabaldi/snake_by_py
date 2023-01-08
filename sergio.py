@@ -112,7 +112,7 @@ def game_over():
     canvas.create_text(canvas.winfo_width()/2, canvas.winfo_height()/2, font=('consolas', 70), text="YOU DIED", fill="#FF0000", tag="gameover")
 
 window = Tk()
-window.title("Snake game")
+window.title("Best Snake game")
 window.resizable(False, False)
 
 score = 0
